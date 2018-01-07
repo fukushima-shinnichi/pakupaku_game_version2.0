@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>pakupaku_game version2.0</title>
+<meta name="description" content="pakupaku_game game using HTML,CSS,jQuery. this game is eat food when point up. add function of select level,target position random ver2.0">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">
+<link href="https://fonts.googleapis.com/css?family=Acme|Courgette|Kalam|PT+Sans+Caption|Yellowtail" rel="stylesheet">
+<link rel="stylesheet" href="css/pakukaku_game/pakupaku_game_version2.0.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+<body>
+  <!-----------  game view erea  -------------------->
+  <div class="main_view">
+    
+    <!--------  game title page  --------------------->
+    <div class="content title">
+      <h1>pakupaku kun geme</h1>
+      <button><p>description</p></button>
+      <small>version 2.0 since 2017/09/03~</small>
+    </div>
+    
+    <!--------  game description page  --------------------->
+    <div class="content description">
+      <h2>description</h2>
+      <div class="descriptionImg">
+        <img src="img/pakupaku_game/discription.png">
+        <div class="discriptionSpeechBalloon">
+          <div class="discriptionSpeechBalloonComment character">
+            <p>You move game character to foods point.</p>
+            <p>You click foods, when foods flow in view.</p>
+          </div>
+        </div>
+        <div class="discriptionSpeechBalloon">
+          <div class="discriptionSpeechBalloonComment cloud">
+            <p>If you eat finished,displayed pink cloud.</p>
+            <p>If you use smart phone,you use width view on smart phone.</p>
+            <p>You click foods, when foods flow in view.</p>
+          </div>
+        </div>
+      </div>
+      <button><p>select level</p></button>
+    </div>
+    
+    <!---------------  select level page  -------------->
+    <div class="content selectLevel">
+      <h2>select level</h2>
+      <div class="levelBox">
+        
+        <!-----------  easy  ------------------->
+        <div class="eachLevel easy">
+          <div class="selectLevelSpeechBalloon_1">
+            <div class="selectLevelSpeechBalloonComment">
+              <p>At first eat snack.</p>
+            </div>
+          </div>
+          <div class="selectLevelSpeechBalloon_2">
+            <div class="selectLevelSpeechBalloonComment">
+              <p>Let's start.</p>
+            </div>
+          </div>
+          <div class="imageBox">
+            <img src="img/pakupaku_game/version_2.0/select_level/easy1_small.jpg">
+            <img src="img/pakupaku_game/version_2.0/select_level/easy2_small.jpg">
+          </div>
+          <button><a href="#easyGameView"><p>easy</p></a></button>
+        </div>
+        
+        <!-----------  normal  ------------------->
+        <div class="eachLevel normal">
+          <div class="selectLevelSpeechBalloon_1">
+            <div class="selectLevelSpeechBalloonComment">
+              <p>Shall we eat cook?</p>
+            </div>
+          </div>
+          <div class="selectLevelSpeechBalloon_2">
+            <div class="selectLevelSpeechBalloonComment">
+              <p>Can you win?</p>
+            </div>
+          </div>
+          <div class="imageBox">
+            <img src="img/pakupaku_game/version_2.0/select_level/normal1_small.jpg">
+            <img src="img/pakupaku_game/version_2.0/select_level/normal2_small.jpg">
+          </div>
+          <button><a href="#normalGameView"><p>normal</p></a></button>
+        </div>
+        
+        <!-----------  hard  ------------------->
+        <div class="eachLevel hard">
+          <div class="selectLevelSpeechBalloon_1">
+            <div class="selectLevelSpeechBalloonComment">
+              <p>Can you really eat all of them?</p>
+            </div>
+          </div>
+          <div class="selectLevelSpeechBalloon_2">
+            <div class="selectLevelSpeechBalloonComment">
+              <p>Are you sanity?</p>
+            </div>
+          </div>
+          <div class="imageBox">
+            <img src="img/pakupaku_game/version_2.0/select_level/hard1_small.jpg">
+            <img src="img/pakupaku_game/version_2.0/select_level/hard2_small.jpg">
+          </div>
+          <button><a href="#hardGameView"><p>hard</p></a></button>
+        </div>
+      </div>
+    </div>
+    
+    <!--------  countdown  --------------------->
+    <div class="content countdown third">
+      <img src="img/pakupaku_game/countdown3_small.jpg">
+      <h2>3</h2>
+    </div>
+    <div class="content countdown second">
+      <img src="img/pakupaku_game/countdown2_small.jpg">
+      <h2>2</h2>
+    </div>
+    <div class="content countdown first">
+      <img src="img/pakupaku_game/countdown1_small.jpg">
+      <h2>1</h2>
+    </div>
+    <div class="content countdown start">
+      <img src="img/pakupaku_game/countdown_start_small.jpg">
+      <h2>start</h2>
+    </div>
+    
+    <!--------  game view & target easy --------------------->
+    <div id="easyGameView" class="game_view">
+      <label>
+        <input type="radio" name="target1" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_easy/target1.png">
+      </label>
+      <label>
+        <input type="radio" name="target2" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_easy/target2.png">
+      </label>
+      <label>
+        <input type="radio" name="target3" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_easy/target3.png">
+      </label>
+      <label>
+        <input type="radio" name="target4" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_easy/target4.png">
+      </label>
+      <label>
+        <input type="radio" name="target5" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_easy/target5.png">
+      </label>
+      <label>
+        <input type="radio" name="target6" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_easy/target6.png">
+      </label>
+      <label>
+        <input type="radio" name="target7" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_easy/target7.png">
+      </label>
+      <label>
+        <input type="radio" name="target8" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_easy/target8.png">
+      </label>
+      <label>
+        <input type="radio" name="target9" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_easy/target9.png">
+      </label>
+      <label>
+        <input type="radio" name="target10" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_easy/target10.png">
+      </label>
+      <label>
+        <input type="radio" name="target11" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_easy/target11.png">
+      </label>
+      <label>
+        <input type="radio" name="target12" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_easy/target12.png">
+      </label>
+      <label>
+        <input type="radio" name="target13" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_easy/target13.png">
+      </label>
+      <label>
+        <input type="radio" name="target14" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_easy/target14.png">
+      </label>
+      <label>
+        <input type="radio" name="target15" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_easy/target15.png">
+      </label>
+      <label>
+        <input type="radio" name="target16" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_easy/target16.png">
+      </label>
+      <label>
+        <input type="radio" name="target17" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_easy/target17.png">
+      </label>
+      <label>
+        <input type="radio" name="target18" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_easy/target18.png">
+      </label>
+      <label>
+        <input type="radio" name="target19" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_easy/target19.png">
+      </label>
+      <label>
+        <input type="radio" name="target20" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_easy/target20.png">
+      </label>
+      <label>
+        <input type="radio" name="target21" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_easy/target21.png">
+      </label>
+      <label>
+        <input type="radio" name="target22" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_easy/target22.png">
+      </label>
+      <label>
+        <input type="radio" name="target23" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_easy/target23.png">
+      </label>
+      <label>
+        <input type="radio" name="target24" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_easy/target24.png">
+      </label>
+      <label>
+        <input type="radio" name="target25" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_easy/target25.png">
+      </label>
+    </div>
+    
+    <!--------  game view & target normal   --------------------->
+    <div id="normalGameView" class="game_view">
+      <label>
+        <input type="radio" name="target1" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_normal/target1.png">
+      </label>
+      <label>
+        <input type="radio" name="target2" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_normal/target2.png">
+      </label>
+      <label>
+        <input type="radio" name="target3" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_normal/target3.png">
+      </label>
+      <label>
+        <input type="radio" name="target4" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_normal/target4.png">
+      </label>
+      <label>
+        <input type="radio" name="target5" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_normal/target5.png">
+      </label>
+      <label>
+        <input type="radio" name="target6" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_normal/target6.png">
+      </label>
+      <label>
+        <input type="radio" name="target7" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_normal/target7.png">
+      </label>
+      <label>
+        <input type="radio" name="target8" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_normal/target8.png">
+      </label>
+      <label>
+        <input type="radio" name="target9" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_normal/target9.png">
+      </label>
+      <label>
+        <input type="radio" name="target10" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_normal/target10.png">
+      </label>
+      <label>
+        <input type="radio" name="target11" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_normal/target11.png">
+      </label>
+      <label>
+        <input type="radio" name="target12" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_normal/target12.png">
+      </label>
+      <label>
+        <input type="radio" name="target13" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_normal/target13.png">
+      </label>
+      <label>
+        <input type="radio" name="target14" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_normal/target14.png">
+      </label>
+      <label>
+        <input type="radio" name="target15" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_normal/target15.png">
+      </label>
+      <label>
+        <input type="radio" name="target16" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_normal/target16.png">
+      </label>
+      <label>
+        <input type="radio" name="target17" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_normal/target17.png">
+      </label>
+      <label>
+        <input type="radio" name="target18" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_normal/target18.png">
+      </label>
+      <label>
+        <input type="radio" name="target19" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_normal/target19.png">
+      </label>
+      <label>
+        <input type="radio" name="target20" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_normal/target20.png">
+      </label>
+      <label>
+        <input type="radio" name="target21" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_normal/target21.png">
+      </label>
+      <label>
+        <input type="radio" name="target22" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_normal/target22.png">
+      </label>
+      <label>
+        <input type="radio" name="target23" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_normal/target23.png">
+      </label>
+      <label>
+        <input type="radio" name="target24" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_normal/target24.png">
+      </label>
+      <label>
+        <input type="radio" name="target25" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_normal/target25.png">
+      </label>
+    </div>
+    
+    <!--------  game view & target hard    --------------------->
+    <div id="hardGameView" class="game_view">
+      <label class="plus">
+        <input type="radio" name="target1" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_hard/target1.png">
+      </label>
+      <label class="plus">
+        <input type="radio" name="target2" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_hard/target2.png">
+      </label>
+      <label class="plus">
+        <input type="radio" name="target3" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_hard/target3.png">
+      </label>
+      <label class="plus">
+        <input type="radio" name="target4" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_hard/target4.png">
+      </label>
+      <label class="plus">
+        <input type="radio" name="target5" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_hard/target5.png">
+      </label>
+      <label class="plus">
+        <input type="radio" name="target6" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_hard/target6.png">
+      </label>
+      <label class="plus">
+        <input type="radio" name="target7" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_hard/target7.png">
+      </label>
+      <label class="plus">
+        <input type="radio" name="target8" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_hard/target8.png">
+      </label>
+      <label class="plus">
+        <input type="radio" name="target9" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_hard/target9.png">
+      </label>
+      <label class="plus">
+        <input type="radio" name="target10" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_hard/target10.png">
+      </label>
+      <label class="plus">
+        <input type="radio" name="target11" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_hard/target11.png">
+      </label>
+      <label class="plus">
+        <input type="radio" name="target12" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_hard/target12.png">
+      </label>
+      <label class="plus">
+        <input type="radio" name="target13" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_hard/target13.png">
+      </label>
+      <label class="plus">
+        <input type="radio" name="target14" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_hard/target14.png">
+      </label>
+      <label class="plus">
+        <input type="radio" name="target15" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_hard/target15.png">
+      </label>
+      <label class="plus">
+        <input type="radio" name="target16" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_hard/target16.png">
+      </label>
+      <label class="plus">
+        <input type="radio" name="target17" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_hard/target17.png">
+      </label>
+      <label class="plus">
+        <input type="radio" name="target18" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_hard/target18.png">
+      </label>
+      <label class="plus">
+        <input type="radio" name="target19" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_hard/target19.png">
+      </label>
+      <label class="plus">
+        <input type="radio" name="target20" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_hard/target20.png">
+      </label>
+      <label class="minus">
+        <input type="radio" name="target21" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_hard/target21.png">
+      </label>
+      <label class="minus">
+        <input type="radio" name="target22" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_hard/target22.png">
+      </label>
+      <label class="minus">
+        <input type="radio" name="target23" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_hard/target23.png">
+      </label>
+      <label class="minus">
+        <input type="radio" name="target24" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_hard/target24.png">
+      </label>
+      <label class="minus">
+        <input type="radio" name="target25" value="0">
+        <span></span>
+        <img src="img/pakupaku_game/version_2.0/target_hard/target25.png">
+      </label>
+    </div>
+    
+    <!----------   score   ------------------->
+    <div class="content score perfect">
+      <div class="speechBalloon">
+        <div class="balloonComment">
+          <h2>score</h2>
+          <h3>AAA</h3>
+          <p>your perfect.</p>
+          <p>Shall we eat dessert?</p>
+        </div>
+      </div>
+      <button><p>try again</p></button>
+    </div>
+    <div class="content score success">
+      <div class="speechBalloon">
+        <div class="balloonComment">
+          <h2>score</h2>
+          <h3>AAA</h3>
+          <p>your success.</p>
+          <p>Do you fight that more drink alcohol?</p>
+        </div>
+      </div>
+      <button><p>try again</p></button>
+    </div>
+    <div class="content score failure">
+      <div class="speechBalloon">
+        <div class="balloonComment">
+          <h2>score</h2>
+          <h3>AAA</h3>
+          <p>your failure.</p>
+          <p>You more eat.</p>
+        </div>
+      </div>
+      <button><p>try again</p></button>
+    </div>
+    
+    <!------------  game character  ------------------------->
+     <div class="yen_posi">
+       <div class="yen">
+         <div class="yen1">
+           <div class="yen11"></div>
+         </div>
+         <div class="yen2">
+           <div class="yen22"></div>
+         </div>
+         <div class="eye"></div>
+       </div>
+       <div class="circle_close">
+         <div class="mouth"></div>
+         <div class="eye_close"></div>
+       </div>
+    </div>
+    
+  </div>
+  
+
+<!---------   jQuery    ----------------------->
+<script src="jQuery_base/jquery-3.2.1.min.js"></script>
+<script src="jQuery_base/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script src="js/pakupaku_game/pakupaku_game_version2.0.js"></script>
+</body>
+</html>
