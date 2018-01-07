@@ -39,12 +39,13 @@
 ## Overview
 * this this website concept is easy 2D game.
 * use HTML5,CSS3,jQuery.
+* version 2.0 is possible to choose level and target position is random.
 * correspondence of responsive design.
 * my web design skill is this web site.
 ## Description
-if you click foods, points up.  
-result page change according to your get points.  
-this skill is javascript of if sentence and HTML input tage.  
+this game be updated version 2.0.  
+use Math.random() of javascript function to can target position be random.  
+animation speed changed can choose level.  
 Let's start this game!!
 ## Component file
 ```
@@ -53,17 +54,17 @@ Component file/
 ├─ jQuery_base                                               # folder of jQuery files.
 ├─ fonts                                                     # folder of web fonts.(saving in this folder at Font Awesome.)
 ├─ img                                                       # folder of images. 
-├─ pakupaku_game.html                                        # Top page.（my coding）
+├─ pakupaku_game_version2.0.html                             # Top page.（my coding）
 ├─ css/
 |   └─ pakupaku_game                                         # folder of css(saving in this folder at css of Font Awesome.)
 |          ├─ img                                            # folder of images.（image of this folder enter to css.）
-|          └─ pakupaku_game.css                              # file of top page css.（my coding）
+|          └─ pakupaku_game_version2.0.css                   # file of top page css.（my coding）
 └─ js/
     └─ pakupaku_game                                         # folder of js.
-           └─ pakupaku_game.js                               # file of top page js.(my coding)
+           └─ pakupaku_game_version2.0.js                    # file of top page js.(my coding)
 ```
 ## Install
 1、all files do fork and this all files do clone in local.  
 2、this local files open to web browser.  
 ## URL of Demo site(URL of my portfolio site)
-[http://s-fukushima.sakura.ne.jp/pakupaku_game.html](http://s-fukushima.sakura.ne.jp/pakupaku_game.html "URL of my portfolio site")
+[http://s-fukushima.sakura.ne.jp/pakupaku_game_version2.0.html](http://s-fukushima.sakura.ne.jp/pakupaku_game_version2.0.html "URL of my portfolio site")
