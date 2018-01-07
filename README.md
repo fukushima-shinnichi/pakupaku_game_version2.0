@@ -1,15 +1,14 @@
-# パクパクくんゲーム version1.0
+# パクパクくんゲーム version2.0
 ## 概要
 * HTML5,CSS3,jQueryを使用し作成したwebサイトで出来る2Dゲームになります
+* version2.0として、レベルの変更、ターゲット位置がランダムになる機能を追加
 * レスポンシブル対応
 * ポートフォリオ用サイト
 ## 説明
-本サイトはポートフォリオ用の自分の技術を紹介するためのサイトになります。    
-フレームワーク無でターゲット（食べ物）をクリックすると得点がUPする2Dゲームを作成してみました。  
-jQueryでCSSの表示を切替える事でカウントダウン後ゲームが開始される仕組みにしました。  
-ターゲット自体もクリックされた際に視覚的に分かるように、表示させました。  
-javascriptの条件分岐式でターゲットの得点合計値より結果画像を切替え、面白さを追加してみました。  
-jQueryのアニメーションによりターゲットが配置されている画面をスライドさせる事によりターゲットの移動を表現しました。  
+本サイトはポートフォリオ用の自分の技術を紹介するためのサイトになります。  
+フレームワーク無でターゲット（食べ物）をクリックすると得点がUPする2Dゲームをver1.0→2.0にアップデートしました。  
+ターゲット表示画面のスライドスピードを変更する事でレベル調整を可能としました。  
+ターゲット位置のランダム機能はjavascriptのMath.random()関数を利用し、乱数をターゲットのポジションにする事で対応しました。  
 フリーですので必要な方はご自由に使用願います。   
 ## ファイルの構成
 ```
@@ -18,20 +17,20 @@ jQueryのアニメーションによりターゲットが配置されている�
 ├─ jQuery_base                                               # jQuery保存フォルダー
 ├─ fonts                                                     # webフォント(Font Awesome)保存フォルダー
 ├─ img                                                       # 画像保存フォルダー
-├─ pakupaku_game.html                                        # トップページ（自身でコーディング）
+├─ pakupaku_game_version2.0.html                             # トップページ（自身でコーディング）
 ├─ css/
 |    └─ pakupaku_game                                        # CSS保存フォルダー(Font Awesomeのcss保存)
 |           ├─ img                                           # 画像保存フォルダー（cssに埋込む用）
-|           └─ pakupaku_game.css                             # CSSファイル（自身でコーディング）
+|           └─ pakupaku_game_version2.0.css                  # CSSファイル（自身でコーディング）
 └─ js/
     └─ pakupaku_game                                         # jsファイル保存フォルダー
-           └─ pakupaku_game.js                               # jsファイル（自身でコーディング）   
+           └─ pakupaku_game_version2.0.js                    # jsファイル（自身でコーディング）   
 ```
 ## インストール方法
 1、全てのファイルをフォークし、ローカルにクローンを作成。  
 2、ローカルに保存したHTMLファイルをウェブブラウザで開く。  
 ## デモサイトURL（ポートフォリオURL）
-[http://s-fukushima.sakura.ne.jp/pakupaku_game.html](http://s-fukushima.sakura.ne.jp/pakupaku_game.html "ポートフォリオURL")
+[http://s-fukushima.sakura.ne.jp/pakupaku_game_version2.0.html](http://s-fukushima.sakura.ne.jp/pakupaku_game_version2.0.html "ポートフォリオURL")
 
 ***
 ***
